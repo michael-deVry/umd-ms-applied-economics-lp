@@ -1,19 +1,19 @@
 <?php
 
-$field_first_name = $_POST['first name'];
-$field_last_nanme = $_POST['last name']
+$field_first_name = $_POST['first'];
+$field_last_nanme = $_POST['last'];
 $field_email = $_POST['email'];
-$field_semester = $_POST['semester']
+$field_semester = $_POST['semester'];
 $field_visa = $_POST['visa'];
-$field_message = $_POST['message']
+$field_message = $_POST['message'];
 
-$mail_to = 'marquisdevry@gmail.com';
+$mail_to = 'masters-econ@umd.edu';
 
-$subject = 'MS Applied Economics Information Request'.$field_first_name;
+$subject = 'MS Applied Economics Information Request'.$field_first;
 
-$body_message = 'Potential Applicant First Name: '.$field_first_name."\n";
+$body_message = 'Potential Applicant First Name: '.$field_first."\n";
 
-$body_message = 'Potential Applicant Last Name: '.$field_last_name."\n";
+$body_message = 'Potential Applicant Last Name: '.$field_last."\n";
 
 $body_message .= 'Potential Applicant E-mail: '.$field_email."\n";
 
@@ -33,14 +33,14 @@ $mail_status = mail($mail_to, $subject, $body_message, $headers);
 if ($mail_status) { ?>
 	<script language="javascript" type="text/javascript">
 		//alert('Thank you for the message. We will contact you shortly.');
-		window.location = 'index.html';
+		window.location = 'masters-in-applied-economics.html';
 	</script>
 <?php
 }
 else { ?>
 	<script language="javascript" type="text/javascript">
 		//alert('Message failed. Please, send an email to gordon@template-help.com');
-		window.location = 'index.html';
+		window.location = 'masters-in-applied-economics.html';
 	</script>
 <?php
 }
